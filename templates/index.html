@@ -1,0 +1,278 @@
+{% extends 'base.html' %} 
+{% load static %}
+{% block content %}
+                        {% comment %} for keepin same spaces between all child elements:- "space-y-6" {% endcomment %}
+  <div class="bg-gray-200" >
+    <div class="navbar">
+      <nav class="bg-yellow-300 md:text-xl bg-opacity-1 text-black fixed w-full top-0 z-10">
+        <div class="max-w-7xl mx-auto px-4">
+          <div class="flex justify-between">
+            <div class="flex space-x-4">
+            {% comment %} mobile button {% endcomment %}
+            <div class=" md:hidden flex items-center">
+            <button class="mobile-menu-button">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+              </svg>
+            </button>
+            </div>
+              {% comment %} logo {% endcomment %}
+              <div >
+                <a href="#" class="flex items-center py-5 px-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 text-blue-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                  <span class="font-bold">Swapnonil Majumdar</span>
+                </a>
+              </div>
+              {% comment %} primary-nav {% endcomment %}
+              <div class=" hidden md:flex items-center space-x-1">
+                <a href="#overview" class="olm">Overview</a>
+                <a href="#work" class="olm">Work</a>
+                <a href="#experience" class="olm">Experience</a>
+                <a href="#contact" class="olm">Contact-me</a>
+              </div>
+              
+            </div>
+            {% comment %} secondary-nav {% endcomment %}
+            <div class="hidden md:flex items-center space-x-1">
+              
+              <a href="/login" class="py-5 px-3">Login</a>
+              <a href="/logout" class="py-5 px-3">Logout</a>
+            
+              <a href="/register" class="py-5 px-3 bg-red-400 hover:bg-red-600 text-gray-900 hover:text-white  transition duration-300">Signup</a>
+            </div>
+            
+          </div>
+        </div>
+        {% comment %} mobilemenu {% endcomment %}
+          <div class="mobile-menu hidden md:hidden">
+            <a href="#overview" class="options">Overview</a>
+            <a href="#work" class="options">Work</a>
+            <a href="#experience" class="options">Experience</a>
+            <a href="#contact" class="options">Contact-me</a>
+          </div>
+      </nav>
+    </div>
+  
+    <div class="heading-cont relative h-96 md:h-screen grid grid-cols-4 grid-rows-4">
+      {% comment %} <div class=" pic text-green-200 absolute text-center right-40 "> {% endcomment %}
+      <div class=" pic absolute w-full h-full  text-green-200 text-center text-3xl md:text-7xl row-start-3 row-end-5 col-start-3 col-end-5">
+        <h5>hello I'm</h5>
+        <h1>Swapnonil Majumdar</h1>
+        <p>Welcome here</p>
+        <a href="#overview">
+          <button class="hidden md:flex  mx-auto bg-transparent  transition duration-300 text-green-700 font-semibold hover:text-green-800  px-4 border-4 border-green-500 hover:border-green-800 rounded-3xl">
+            Let's Go
+          </button>
+        </a>
+    
+      </div>
+    </div>
+    <div class="pt-12" id="overview">
+      <div class="relative bg-indigo-300 h-36 overflow-hidden">
+        <div class="max-w-7xl mx-auto ">
+          <div class="relative z-0  bg-gray-300 lg:max-w-2xl w-full "> 
+            <svg class="hidden lg:block absolute right-0 inset-y-0 h-full w-48 text-white transform translate-x-1/2"  fill="currentColor" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+              <polygon points="50,0 100,0 50,100 0,100" />
+              <h1 class="font-bold pt-14 pb-14 text-3xl text-center">Overview</h1>
+            </svg>
+          </div> 
+        </div>
+      </div>
+      <div class="max-w-7xl mx-auto my-6 px-4 " >
+        <p class="text-xl">Hello, I am Swapnonil Majumdar, I'm a web developer.Currently I am styding B.Tech. I can make websites for you beautiful and in a responsive way for every devices.So there is some of my projects below in the projects section please check out and contact me if you are interested,<br>Thank you and go ahead </p>
+        <div class="md:grid grid-cols-4">
+          <img src="../static/images/resp.png" class="col-start-2 col-span-2"/>
+        </div>
+      </div>
+    </div>
+    <div class="pt-12" id="work">
+      <div class="relative bg-indigo-300 h-36 overflow-hidden">
+        <div class="max-w-7xl mx-auto ">
+          <div class="relative z-0  bg-gray-300 lg:max-w-2xl  w-full "> 
+            <svg class="hidden lg:block absolute right-0 inset-y-0 h-full w-48 text-white transform translate-x-1/2"  fill="currentColor" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+              <polygon points="50,0 100,0 50,100 0,100" />
+              <h1 class="font-bold pt-14 pb-14 text-3xl text-center">Work</h1>
+            </svg>
+            
+          </div> 
+        </div>
+      </div>
+      <div class="max-w-7xl mx-auto my-6 px-4 text-center" >
+        <div class="grid md:grid-cols-2 md:grid-rows-1 sm:grid-rows-3 gap-4 h-auto">
+          <div class="shadow-xl bg-white md:transform hover:scale-110  duration-300">
+            <figure class="mbg-gray-100 rounded-xl p-8">
+              <img class="w-32 h-32 rounded-full mx-auto" src="{% static "images/copy.jpeg" %}"  alt="" width="384" height="512">
+              <div class="pt-6 text-center space-y-4">
+              <h1 class="text-3xl font-bold">Fly-buy</h1>
+                <blockquote>
+                  <p class="text-lg font-semibold">
+                    This is just a Frontend part of an E-commerce website. HTML,CSS,BOOTSTRAP and some manual JAVASCRIPT has been used in this project. Click the given link below to access and download my project in Gdrive.
+                  </p>
+                </blockquote>
+                <figcaption class="font-medium">
+                  <div class=" text-2xl">
+                    <a class="Gdrive" href="https://swapnonil-rishi.github.io/Flybuy_project/">Check from here</a>
+                  </div>
+                </figcaption>
+              </div>
+            </figure>
+          </div>
+          <div class="shadow-xl bg-white md:transform hover:scale-110 motion-reduce:transform-none duration-300">
+            <figure class="mbg-gray-100 rounded-xl p-8">
+              <img class="w-32 h-32 rounded-full mx-auto" src="{% static "images/copy.jpeg" %}"  alt="" width="384" height="512">
+              <div class="pt-6 text-center space-y-4">
+                <h1 class="text-3xl font-bold">Movierater</h1>
+                <blockquote>
+                  <p class="text-lg font-semibold">
+                    This is both frontend and backend project done by me. It's one of my personal projects. This is a movierating website and new movie can be created as well as every movie can be rated, edited and even deleted.
+                  </p>
+                </blockquote>
+                <figcaption class="font-medium">
+                  <div class=" text-2xl">
+                    <a class="Gdrive" href="https://movie-rate-44beb.web.app/">Check from here</a>
+                  </div>
+                </figcaption>
+              </div>
+            </figure>
+          </div>
+          {% comment %} <div class="shadow-xl bg-white">
+          jhASBfjkzn xc
+          </div> {% endcomment %}
+        </div>
+      </div>
+    </div>
+
+    <div class="pt-12" id="experience">
+      <div class="relative bg-indigo-300 h-36 overflow-hidden">
+        <div class="max-w-7xl mx-auto ">
+          <div class="relative z-0  bg-gray-300 lg:max-w-2xl  w-full "> 
+            <svg class="hidden lg:block absolute right-0 inset-y-0 h-full w-48 text-white transform translate-x-1/2"  fill="currentColor" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+              <polygon points="50,0 100,0 50,100 0,100" />
+              <h1 class="font-bold pt-14 pb-14 text-3xl text-center">Experience</h1>
+            </svg>
+            
+          </div> 
+        </div>
+      </div>
+      <div class="max-w-7xl mx-auto my-6 px-4 " >
+        <div class="grid grid-cols-2 gap-4 h-auto">
+          <div class="card-prog shadow-xl bg-gray-100 rounded-lg">
+            <h1 class="text-center pt-4 font-bold">My Experience in web development</h1>
+            <div class="bar py-5 px-5 space-y-7">
+                <div class="html">
+                  <h1 class="">HTML</h1>
+                  <div class="h-3 relative max-w-xl rounded-full overflow-hidden">
+                    <div class="w-full h-full bg-gray-400 absolute"></div>
+                    <div class="h-full bg-blue-500 absolute" style="width:85%"></div>
+                  </div>
+                </div>
+                <div class="css">
+                  <h1 class="">CSS</h1>
+                  <div class="h-3 relative max-w-xl rounded-full overflow-hidden">
+                    <div class="w-full h-full bg-gray-400 absolute"></div>
+                    <div class="h-full bg-blue-500 absolute" style="width:70%"></div>
+                  </div>
+                </div>
+                <div class="bootstrap">
+                  <h1 class="">BOOTSTRAP</h1>
+                  <div class="h-3 relative max-w-xl rounded-full overflow-hidden">
+                    <div class="w-full h-full bg-gray-400 absolute"></div>
+                    <div class="h-full bg-blue-500 absolute" style="width:70%"></div>
+                  </div>
+                </div>
+                <div class="tailwind">
+                  <h1 class="">TAILWIND</h1>
+                  <div class="h-3 relative max-w-xl rounded-full overflow-hidden">
+                    <div class="w-full h-full bg-gray-400 absolute"></div>
+                    <div class="h-full bg-blue-500 absolute" style="width:75%"></div>
+                  </div>
+                </div>
+                <div class="javascript">
+                  <h1 class="">JAVASCRIPT</h1>
+                  <div class="h-3 relative max-w-xl rounded-full overflow-hidden">
+                    <div class="w-full h-full bg-gray-400 absolute"></div>
+                    <div class="h-full bg-blue-500 absolute" style="width:30%"></div>
+                  </div>
+                </div>
+                <div class="react">
+                  <h1 class="">REACT.JS</h1>
+                  <div class="h-3 relative max-w-xl rounded-full overflow-hidden">
+                    <div class="w-full h-full bg-gray-400 absolute"></div>
+                    <div class="h-full bg-blue-500 absolute" style="width:25%"></div>
+                  </div>
+                </div>
+                <div class="django">
+                  <h1 class="">DJANGO</h1>
+                  <div class="h-3 relative max-w-xl rounded-full overflow-hidden">
+                    <div class="w-full h-full bg-gray-400 absolute"></div>
+                    <div class="h-full bg-blue-500 absolute" style="width:70%"></div>
+                  </div>
+                </div>
+            </div>
+          </div>
+          <div class="exp_text">
+            <p class="text-lg">Here is my experiences on different topics related to web-development in a progress-bar format. This bars are defining my knowledge on that topic based on my working experience.<p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer pt-12" id="contact">
+      <footer class="footer-1 bg-indigo-300 py-8 sm:py-12">
+        <div class="container mx-auto px-4">
+          <h1 class="font-bold text-3xl">Contact-me</h1>
+          <div class="sm:flex sm:flex-wrap sm:-mx-4 md:py-4">
+            <div class="px-4 sm:w-1/2 md:w-1/4 xl:w-1/6">
+              <h5 class="text-xl font-bold mb-6">Address</h5>
+              <p>123/7-A Gopal Lal Tagore Road Kolkata-700035<p>
+              <p><span class="font-bold">State-</span>West-Bengal</p>
+              <p><span class="font-bold">Country-</span>India</p>
+            </div>
+            <div class="px-4 sm:w-1/2 md:w-1/4 xl:w-1/6">
+              <h5 class="text-xl font-bold mb-6">Phone/Whatsapp</h5>
+              <p>+91 9804734943<p>
+            </div>
+            <div class="px-4 sm:w-1/2 md:w-1/4 xl:w-1/6">
+              <h5 class="text-xl font-bold mb-6">Email</h5>
+              <p>swapnonilmajumdar0@gmail.com<p>
+            </div>
+            <div class="px-4 mt-4 sm:w-1/3 xl:w-1/6 sm:mx-auto xl:mt-0 xl:ml-auto">
+              <h5 class="text-xl font-bold mb-6 sm:text-center xl:text-left">Stay connected</h5>
+              <div class="flex sm:justify-center xl:justify-start">
+                <a href="https://www.facebook.com/Swapnonilmajumdar/" class="w-8 h-8 border border-2 border-gray-400 rounded-full text-center py-1 text-gray-600 hover:text-white hover:bg-blue-600 hover:border-blue-600">
+                  <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/swapnonil-majumdar-08855921a" class="w-8 h-8 border border-2 border-gray-400 rounded-full text-center py-1 ml-2 text-gray-600 hover:text-white hover:bg-blue-400 hover:border-blue-400">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://www.instagram.com/swapnonilmajumdar/" class="w-8 h-8 border border-2 border-gray-400 rounded-full text-center py-1 ml-2 text-gray-600 hover:text-white hover:bg-red-500  hover:border-blue-400">
+                  <i class="fab fa-instagram"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="">Copyright@SwapnonilMajumdar_07</div>
+        </div>
+      </footer>
+    </div>
+
+
+
+  </div>
+  <script>
+    const btn = document.querySelector("button.mobile-menu-button");
+    const menu = document.querySelector(".mobile-menu");
+    btn.addEventListener("click", ()=>{
+      menu.classList.toggle('hidden');
+    });
+  </script>
+{% endblock content %}
+{% comment %} <div class="relative bg-indigo-500 overflow-hidden">
+  <div class=" max-w-7xl mx-auto">
+    <div class="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
+      <svg class="hidden lg:block absolute right-0 inset-y-0 h-full w-48 text-white transform translate-x-1/2" fill="currentColor" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+        <polygon points="50,0 100,0 50,100 0,100" />
+      </svg>
+</div> {% endcomment %}

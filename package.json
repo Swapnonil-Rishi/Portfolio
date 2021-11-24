@@ -1,0 +1,16 @@
+{
+  "name": "portfolio_dj",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "tailwindcss": "^2.2.19"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "build": "tailwind -i static/css/style.css -o static/css/output.css -w"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
